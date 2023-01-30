@@ -1,0 +1,69 @@
+@mixin flexContent($direction: row) {
+  display: flex;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+.header {
+  @include flexContent;
+  
+  font-size: 14px;
+  font-weight: 400;
+  margin-inline :84px 83px;
+  height: 2.5rem;
+
+  #{&}__left img{
+    height: 35px;
+    width: 197px;
+    margin-top: 28px;
+  }
+
+  #{&}__right {
+    height: 40px;
+    width:1050px;
+    @include flexContent();
+    justify-content: space-between;
+    margin-top: 32px;
+
+
+    &_list {
+      list-style: none;
+      @include flexContent();
+      &_items {
+        @include flexContent();
+        cursor: pointer;
+        margin-left: 29px;
+        & i {
+            margin-left: 8px;
+        }
+      }
+    }
+
+    &_about{
+        @include flexContent();
+        width: 344px;
+        margin-left: 220px;
+
+        & section{
+            @include flexContent();
+            width: 90px;
+            justify-content: space-between;
+            align-items: center;
+        }
+        & p{
+            margin-left: 24px;
+            width: 120px;
+        }
+    }
+
+    &_button {
+        background: #30bf91;
+      margin-left: 16px;
+      color: white;
+      border: none;
+      height: 38px;
+      width: 87px;
+      border-radius: 5px;
+    }
+  }
+}

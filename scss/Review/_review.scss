@@ -1,0 +1,92 @@
+@use "../Header/" as h;
+
+.review {
+  @include h.flexContent(column);
+  margin-top: 160px;
+  text-align: center;
+  height: 391px;
+  width: 923px;
+  margin-inline: 258px;
+
+  & h1 {
+    margin-bottom: 32px;
+    font-family: Poppins;
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  & p {
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  &__image {
+    width: 100%;
+    display: flex;
+    margin-top: 120px;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.comp {
+  & h1 {
+    margin-top: 190px;
+    margin-inline: 307px;
+    font-size: 36px;
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 300px);
+    margin-inline: 100px;
+    height: 60vh;
+
+    &_icons {
+      @include h.flexContent;
+      justify-content: center;
+    }
+  }
+}
+
+.feedback {
+  height: 482px;
+  margin-inline: 225px 226px;
+  margin-top: 60px;
+  & h1 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+  }
+  &--para {
+    margin-top: 45px;
+    font-size: 22px;
+    font-weight: 300;
+  }
+  &__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 95px;
+
+    &_contain {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: space-evenly;
+
+      & section {
+        @include h.flexContent(column);
+        align-items: center;
+        justify-content: center;
+        & p {
+          font-size: 12px;
+          text-align: center;
+          margin-top: 21px;
+        }
+      }
+    }
+  }
+}

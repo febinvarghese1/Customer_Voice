@@ -1,0 +1,110 @@
+@use "../boilerplate" as b;
+@use "../Article/" as a;
+@use "../Banner2/" as banner;
+.darksection {
+  background-color: #33393f;
+  color: white;
+  position: relative;
+  height: 1692px;
+  width: 1440px;
+  z-index: -10;
+
+  margin-top: 300px;
+
+  & h1 {
+    font-family: Inter;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 56px;
+    text-align: center;
+    margin-top: 114px;
+    padding-top: 104px;
+    margin-inline: 380px;
+  }
+  &--para {
+    margin-inline: 209px;
+    margin-top: 20px;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: center;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    font-size: 1rem;
+    &_items {
+      margin-top: 60px;
+      margin-inline: 100px;
+      & div {
+        display: flex;
+        align-items: center;
+      }
+      &_detail {
+        font-family: Inter;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 32px;
+        text-align: left;
+        margin-left: 55px;
+        margin-top: 20px;
+      }
+      & h2 {
+        font-family: Inter;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 56px;
+
+        margin-left: 24px;
+      }
+
+      &__details {
+        font-size: 18px;
+        margin-left: 55px;
+        width: 80%;
+      }
+    }
+  }
+}
+
+.dark__banner {
+  @extend .banner2;
+  height: 278px;
+  width: 1274px;
+  margin-inline: 82px;
+  margin-top: -140px;
+  z-index: 10;
+
+  &_heading {
+    font-size: 28px;
+    padding-top: 40px;
+    margin-inline: 205px;
+    margin-bottom: 32px;
+  }
+
+  & p{
+    margin-top: 15px;
+      font-family: Inter;
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 14px;
+      word-spacing: 3px;
+      & span {
+        font-size: 14px;
+        font-weight: 600;
+      }
+  }
+  &_inputs {
+    @extend .banner2__inputs;
+
+    & input {
+      @extend .banner2__inputs_input;
+    }
+    & button {
+      @extend .banner2__inputs_button;
+    }
+  }
+}

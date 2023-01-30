@@ -1,0 +1,109 @@
+@use "../Header" as h;
+
+@use "../breakpoints" as breakpoints;
+
+.main {
+  @include h.flexContent();
+  align-items: center;
+
+  margin-top: 110px;
+  background-color: #fff;
+
+  #{&}__image img {
+    height: 356px;
+    width: 626px;
+    margin-right: 83px;
+    margin-top: 25px;
+  }
+
+  #{&}__content {
+    margin-left: 79px;
+    margin-right: 22px;
+    display: flex;
+    flex-direction: column;
+
+    &_list {
+      display: flex;
+      align-items: center;
+
+      & li {
+        font-family: Inter;
+        font-size: 12px;
+        font-weight: 300;
+        text-align: left;
+        margin-left: 30px;
+        margin-top: 14px;
+
+
+        &:nth-child(1){
+          list-style: none;
+          margin-left: 0;
+        }&:nth-child(2){
+          color: gray;
+          & span{
+            color: black;
+          }
+        }
+        &:nth-child(4){
+          font-weight: 500;
+          font-size: 14px;
+        }
+      }
+    }
+
+    & section {
+      height: 55px;
+      width: 482px;
+    }
+    &_heading {
+      font-family: Poppins;
+      font-size: 56px;
+      font-weight: 700;
+      line-height: 70px;
+    }
+
+    &_detail {
+      font-family: Inter;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 32px;
+      margin-top: 18px;
+
+      margin-right: 195px;
+    }
+
+    &_form {
+      margin-top: 20px;
+
+      &_input {
+        height: 50px;
+        width: 268px;
+        border-radius: 5px;
+        font-family: Inter;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 19px;
+        letter-spacing: 0.15px;
+        border: 0.5px solid grey;
+        font-size: 1rem;
+        padding-left: 10px;
+      }
+      &_button {
+        height: 50px;
+        width: 173px;
+        border-radius: 5px;
+        margin-left: 1px;
+        font-family: Inter;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 30px;
+        letter-spacing: 0.15px;
+        text-align: center;
+
+        color: white;
+        background-color: #19b885;
+        border: none;
+      }
+    }
+  }
+}

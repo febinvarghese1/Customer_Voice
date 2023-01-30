@@ -1,0 +1,124 @@
+@use "../Header/header" as h;
+@use "../Article/" as a;
+
+.backgroundColor {
+  height: 1478px;
+  width: 1440px;
+  background: #f5fdff;
+}
+
+.banner {
+  @include h.flexContent;
+  margin-top: 104px;
+
+  width: 1274px;
+  margin-inline: 83px 84px;
+
+  &__contain {
+    @include h.flexContent;
+    background: #33393f;
+    color: white;
+    font-size: 0.85rem;
+    height: 304px;
+
+    &_items {
+      text-align: center;
+      flex: 1;
+      & h2 {
+        font-family: Inter;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 25px;
+        text-align: center;
+      }
+
+      & p {
+        font-family: Inter;
+        font-size: 18px;
+        margin-top: 20px;
+        font-weight: 300;
+        line-height: 23px;
+        text-align: center;
+        margin-inline: 50px;
+      }
+      & img {
+        margin-top: 25px;
+      }
+    }
+  }
+
+  &--article {
+    @extend .article;
+    height: 383px;
+    width: 1252px;
+    background-color: #fff;
+    margin-top: -170px;
+    margin-inline: 105px 83px;
+
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 32px;
+    text-align: center;
+
+    & img {
+      margin-right: 200px;
+    }
+
+    &_list {
+      @include h.flexContent();
+
+      margin-top: 122px;
+      &_item {
+        @include h.flexContent(column);
+        align-items: left;
+
+        &_image {
+          height: 60.04px;
+          width: 273.24px;
+          background-color: #19b885;
+          padding-top: 15px;
+          color: white;
+          font-weight: 100;
+          clip-path: polygon(
+            89% 0,
+            100% 50%,
+            87% 100%,
+            0% 100%,
+            10% 49%,
+            0% 0%
+          );
+
+          &--first {
+            clip-path: polygon(
+              89% 0,
+              100% 50%,
+              87% 100%,
+              0% 100%,
+              0 51%,
+              0% 0%
+            );
+          }
+        }
+      }
+    }
+
+    &_content {
+      margin-top: 20px;
+      margin-inline: 120px;
+    }
+    &_content1{
+      margin-top: 75px;
+    }
+
+    &_heading {
+      font-family: Poppins;
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 56px;
+      text-align: center;
+      margin-top: 240px;
+      margin-inline: 240px;
+    }
+  }
+}

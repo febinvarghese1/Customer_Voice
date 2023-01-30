@@ -1,0 +1,107 @@
+@use "../Banner2/" as banner;
+@use "../Home/" as h;
+.footer {
+  margin-bottom: 200px;
+  &__banner {
+    margin-top: 120px;
+    @extend .banner2;
+    background: #364250;
+
+    margin-inline: 32px;
+    height: 331px;
+    width: 1376px;
+
+    & h1 {
+      padding-top: 65px;
+      font-family: Poppins;
+      font-size: 48px;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    &_inputs {
+      margin-top: 32px;
+      &_input {
+        height: 55.8px;
+        width: 310px;
+        font-family: Inter;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: 0px;
+        text-align: left;
+        border: 0.5px solid grey;
+        font-size: 1rem;
+        text-align: center;
+      }
+      &--button {
+        background-color: #19b885;
+        height: 55.47px;
+        width: 195px;
+        border: none;
+        color: white;
+        text-align: center;
+        font-size: 18px;
+        margin-left: 0;
+        font-weight: 400;
+      }
+    }
+
+    & p {
+      margin-top: 17.52px;
+    }
+  }
+
+  &__content {
+    height: 317px;
+    width: 1080.47px;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 130px;
+    margin-inline: 147px 212px;
+
+    &_items {
+      & h1 {
+        font-family: Inter;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 22px;
+        text-align: left;
+      }
+
+      &_item, h4 {
+        margin-top: 37px;
+        font-family: Inter;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 28px;
+        letter-spacing: 0px;
+        text-align: left;
+
+        
+
+        & section {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+        & #icons {
+          margin-top: 60px;
+        }
+      }
+    }
+
+    &_list {
+      list-style: none;
+      margin-top: 30px;
+
+      &_items {
+        margin-top: 10px;
+        font-size: 14px;
+        font-weight: 100;
+        line-height: 28px;
+      }
+    }
+  }
+}

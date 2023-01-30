@@ -1,0 +1,39 @@
+@use "../Article/" as a;
+
+.section {
+  display: grid;
+  grid-template-columns: 626px 502px;
+
+  margin-top: 620px;
+
+  #{&}__icons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    &_contain {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-inline: 60px;
+      width: 100%;
+
+      & span {
+        margin-top: 20px;
+      }
+    }
+  }
+  #{&}__image {
+    margin-inline: 166px 129px;
+  }
+}
+
+.article--section {
+  margin-top: 90px;
+  margin-inline: 236px;
+  text-align: center;
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 32px;
+  text-align: center;
+}
